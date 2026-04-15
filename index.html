@@ -331,6 +331,7 @@ body {
 }
 .cover-news { background: linear-gradient(135deg,#0a0a0f,#1a1a2e,#2d1b4e); }
 .cover-deploy { background: linear-gradient(135deg,#0a1628,#1e3a5f,#3730a3); }
+.cover-ranking { background: linear-gradient(135deg,#0a1a0a,#0d2d1a,#1a4731); }
 .portfolio-card-title { font-size: 1.1rem; margin: 1rem 1.25rem 0.4rem; }
 .portfolio-card-desc { font-size: 0.9rem; color: var(--text-muted); margin: 0 1.25rem 0.75rem; line-height: 1.5; }
 .portfolio-card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 1.25rem; }
@@ -567,6 +568,15 @@ body {
           </div>
         </article>
 
+        <article class="portfolio-card" data-project="ranking">
+          <div class="portfolio-card-cover cover-ranking">🏆</div>
+          <h3 class="portfolio-card-title">大模型排行榜</h3>
+          <p class="portfolio-card-desc">基于 OpenRouter 真实调用量，展示全球 40+ 顶尖 AI 模型的排名、定价与厂商分析。</p>
+          <div class="portfolio-card-tags">
+            <span>数据可视化</span><span>LLM</span><span>OpenRouter</span><span>实时排名</span>
+          </div>
+        </article>
+
         <article class="portfolio-card" data-project="deploy">
           <div class="portfolio-card-cover cover-deploy">🚀</div>
           <h3 class="portfolio-card-title">免费部署静态网站完全指南</h3>
@@ -610,6 +620,33 @@ body {
                 <p>TypeScript · tsx · rss-parser · Node.js fs</p>
               </div>
               <a class="modal-cta" href="https://allen66c.github.io/ai-news/2026-04-15.html" target="_blank">体验在线 Demo →</a>
+            </div>
+          </div>
+        </div>
+
+        <div data-project="ranking">
+          <div class="modal-grid">
+            <div class="modal-preview cover-ranking">🏆</div>
+            <div class="modal-text">
+              <h3>大模型排行榜</h3>
+              <div class="modal-block">
+                <h4>项目背景</h4>
+                <p>市面上缺乏基于真实调用数据的 LLM 排行，基于 OpenRouter 平台实际 Token 消耗量，构建客观、实时的大模型排行榜。</p>
+              </div>
+              <div class="modal-block">
+                <h4>核心功能</h4>
+                <ul>
+                  <li>TOP 10 模型周调用量排行，含市场份额</li>
+                  <li>40+ 模型库，支持按厂商筛选 / 多列排序</li>
+                  <li>11 大厂商市场份额对比分析</li>
+                  <li>热门 AI 应用 Token 消耗量排行</li>
+                </ul>
+              </div>
+              <div class="modal-block">
+                <h4>技术栈</h4>
+                <p>纯 HTML · CSS · JavaScript · OpenRouter API</p>
+              </div>
+              <a class="modal-cta" href="https://allen66c.github.io/llm-ranking/" target="_blank">体验在线 Demo →</a>
             </div>
           </div>
         </div>
