@@ -206,11 +206,12 @@ body {
   animation: breathe 2s ease-in-out infinite;
 }
 @keyframes breathe { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.7;transform:scale(1.2)} }
-.hub-planets { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 2.5rem 3rem; margin-top: 2rem; }
+.hub-planets { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0 3rem; margin-top: 2rem; margin-bottom: 1rem; }
+.planet-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
 .planet {
   width: 72px; height: 72px; border-radius: 50%; border: none; cursor: pointer;
   position: relative; transition: transform 0.4s ease, box-shadow 0.3s ease;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   box-shadow: inset -8px -8px 20px rgba(0,0,0,0.3), inset 8px 8px 20px rgba(255,255,255,0.08), 0 0 25px currentColor;
 }
 .planet::before {
@@ -218,9 +219,8 @@ body {
   border: 1px solid currentColor; opacity: 0.4; pointer-events: none;
 }
 .planet-label {
-  position: absolute; bottom: -1.75rem; left: 50%; transform: translateX(-50%);
-  font-size: 1rem; font-weight: 500; white-space: nowrap; opacity: 1;
-  color: rgba(255,255,255,0.92);
+  font-size: 0.95rem; font-weight: 500; white-space: nowrap;
+  color: rgba(255,255,255,0.92); text-align: center;
 }
 .planet:hover { transform: scale(1.1) rotate(8deg); }
 .planet-about { background: linear-gradient(145deg,#c4b5fd,#a78bfa); color: var(--accent-purple); }
@@ -454,12 +454,14 @@ body {
         <p class="hub-slogan">热爱 AI 与产品，相信技术能让生活变得更有趣。喜欢把想法变成真实可用的东西，享受每一次「它真的跑起来了」的瞬间。</p>
         <button type="button" class="hub-contact-trigger" id="btn-contact-hub">📩 Contact Me</button>
         <div class="hub-planets">
-          <button type="button" class="planet planet-about" data-goto="about" title="关于我">
+          <div class="planet-wrap">
+            <button type="button" class="planet planet-about" data-goto="about" title="关于我"></button>
             <span class="planet-label">About Me</span>
-          </button>
-          <button type="button" class="planet planet-portfolio" data-goto="portfolio" title="作品集">
+          </div>
+          <div class="planet-wrap">
+            <button type="button" class="planet planet-portfolio" data-goto="portfolio" title="作品集"></button>
             <span class="planet-label">Portfolio</span>
-          </button>
+          </div>
         </div>
         <div class="hub-status">
           <span class="hub-status-dot"></span>
